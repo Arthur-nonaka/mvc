@@ -1,7 +1,9 @@
 <?php
 
 session_start();
-require "funcoesBD.php";
+require_once "../controller/Controladorphp";
+
+$controlador = new Controlador();
 
 //Login
 if(isset($_POST['inputEmailLog']) && isset($_POST['inputSenhaLog'])){
@@ -65,6 +67,8 @@ if(!empty($_POST['inputNomeProd']) && !empty($_POST['inputFabricanteProd']) &&
     $fabricante = $_POST['inputFabricanteProd'];
     $descricao = $_POST['inputDescricaoProd'];
     $valor = $_POST['inputValorProd'];
+
+    $controlador->cadastrarProduto($nome, $fabricante, $descricao, $valor);
 
     header('Location:../view/cadastroProduto.php');
     die();

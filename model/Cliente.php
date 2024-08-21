@@ -1,4 +1,4 @@
 <?php
-public class Cliente {
+class Cliente {
     
 }

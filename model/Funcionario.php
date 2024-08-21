@@ -1,4 +1,4 @@
 <?php
-public class Funcionario {
+class Funcionario {
 
 }
